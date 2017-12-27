@@ -17,12 +17,12 @@ typedef enum con_state_t{
 
 // Keep track of important system state variables
 typedef struct sys_state_t{
-  float theta;  		 // MIP body angle
+  float theta;             // MIP body angle
   float phi;   		   // wheel turn angle
   float u1;      	   // motor duty cycle; control output (inner loop)
-  float u2;     		 // theta_ref; control output (outer loop)
-  float wheel_L_RAD; // Left wheel position in radians
-  float wheel_R_RAD; // right wheel position in radians
+  float u2;                // theta_ref; control output (outer loop)
+  float wheel_L_RAD;       // Left wheel position in radians
+  float wheel_R_RAD;       // right wheel position in radians
   float time_count;
 } sys_state_t;
 
@@ -30,7 +30,7 @@ typedef struct sys_state_t{
 typedef struct setpoint_t{
 	float theta_ref;  	 // MIP body angle
 	float theta_err;
-	float phi_ref;   		 // wheel turn angle
+	float phi_ref;           // wheel turn angle
 	float phi_err;
 	con_state_t con_state;
 } setpoint_t;
